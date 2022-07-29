@@ -1,0 +1,258 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+body {
+  perspective: 900px; /*Определяет расcтояние между плоскостью z = 0 и пользователем для того, чтобы задать перспективу*/
+  perspective-origin: center -5em; /*Определяет точку сходимости линий при перспективе*/
+  background: #1a1a1a;
+}
+
+.header {
+  background-color: #1a1a1a;
+  height: 90px;
+}
+
+.logo {
+  text-transform: uppercase;
+  text-align: left;
+  color: white;
+  padding: 20px 0 20px 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.slider_content {
+  background-image: url('@/assets/image/top_block.jpg');
+  background-repeat: no-repeat;
+  height: 110vh;
+  background-size: cover;
+}
+
+.main_slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.main_slader_text {
+  margin-top: 20%;
+  text-align: center;
+  color: white;
+  padding: 0 50% 0 5%;
+}
+
+.h_main_txt {
+  font-size: 48px;
+  padding-bottom: 10px;
+}
+
+.p_main_txt {
+  padding-bottom: 20px;
+}
+
+.button_online {
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.button_online:hover {
+  background-color: #e68500;
+  cursor: pointer;
+}
+
+.button_cal {
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #e68500;
+  width: 200px;
+}
+
+.button_cal:hover {
+  cursor: pointer;
+}
+
+.link_cal{
+  color: white;
+  &:hover{
+    color: white;
+  }
+}
+
+
+.text_block_dis {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0 5% 0 5%;
+}
+
+.txt_img_b {
+  padding: 5% 8% 5% 15%;
+  text-align: center;
+}
+
+.img_b {
+  display: flex;
+}
+
+.square {
+  width: 350px;
+  height: 500px;
+  background: #e68500;
+  margin: 60px;
+}
+
+.img_cosm {
+  width: 350px;
+  height: 500px;
+}
+
+.cosm {
+  position: absolute;
+  margin: 110px 0 0 140px;
+}
+
+.name_in {
+  border: 0;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.cal_bloc {
+  background-color: #1a1a1a;
+  text-align: center;
+  color: white;
+  padding: 1% 20% 2% 20%;
+}
+
+.dop_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2% 0 5% 0;
+}
+
+.text_part {
+  padding-top: 10%;
+  text-align: center;
+}
+
+.bloc_info {
+  height: 100%;
+  width: 95%;
+  background-image: url('@/assets/image/top_block.jpg');
+  background-repeat: no-repeat;
+  padding-bottom: 5%;
+  margin: 0 0 0 2%;
+}
+
+.box_move {
+  width: 10em;
+  height: 10em;
+  border: 2px dotted silver;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  height: 10vh;
+  border-top: white 1px solid;
+}
+
+@media (max-width: 1400px) {
+  .text_block_dis {
+    grid-template-columns: 50% 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .h_info_dop_txt {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .text_block_dis {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .main_slader_text {
+    margin-top: 15%;
+    text-align: center;
+    color: white;
+    padding: 0 10% 0 10%;
+  }
+
+  .main_slider {
+    padding-top: 14%;
+  }
+
+  .dop_info {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .space_b {
+    margin-bottom: 4%;
+  }
+}
+
+
+@media (max-width: 660px) {
+  .square {
+    width: 270px;
+    height: 410px;
+  }
+  .img_cosm {
+    width: 270px;
+    height: 410px;
+  }
+  .cosm {
+    margin: 35px 0 0 20px;
+  }
+  .square {
+    margin: 20px 0 0 0;
+    padding: 0 10% 0 0;
+  }
+  .img_b{
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .h_main_txt {
+    font-size: 38px;
+  }
+}
